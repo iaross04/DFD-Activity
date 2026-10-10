@@ -27,7 +27,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "Generic Trust \nBoundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -35,17 +35,65 @@
               "containedElements": []
             },
             "labels": [
-              "Trust Boundary"
+              "Generic Trust \nBoundary"
             ],
-            "id": "829b742b-50e1-4a87-9711-8f3ecbabec30",
+            "id": "c8088cf0-5655-40ee-aec5-04048322f824",
             "source": {
-              "x": 298,
-              "y": 608
+              "x": 370,
+              "y": 600
             },
             "target": {
-              "x": 398,
-              "y": 708
-            }
+              "x": 310,
+              "y": 90
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 420
+              },
+              {
+                "x": 230,
+                "y": 340
+              },
+              {
+                "x": 230,
+                "y": 250
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Generic Trust \nBoundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Generic Trust \nBoundary"
+            ],
+            "id": "8b0820f6-c149-4521-821b-1e0bb1699e2b",
+            "source": {
+              "x": 790,
+              "y": 40
+            },
+            "target": {
+              "x": 750,
+              "y": 650
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": 290
+              }
+            ]
           },
           {
             "position": {
@@ -68,6 +116,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -151,7 +200,6 @@
               ]
             },
             "id": "8181be74-ca72-4bba-9079-b4f46bff31ec",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Browser\nClient",
@@ -162,7 +210,10 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            }
+            },
+            "children": [
+              "6ddcd42f-3954-4065-819e-bfa3dcac1226"
+            ]
           },
           {
             "position": {
@@ -185,6 +236,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -268,7 +320,6 @@
               ]
             },
             "id": "2b7260fe-d4a3-49a5-85aa-f5b1be8fbf4b",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web\nApplication",
@@ -289,8 +340,8 @@
           },
           {
             "position": {
-              "x": 361,
-              "y": 40
+              "x": 381,
+              "y": 55
             },
             "size": {
               "width": 110,
@@ -308,6 +359,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -391,7 +443,6 @@
               ]
             },
             "id": "8065e9c3-6910-417b-936b-e6ba9c9c5375",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Authorization \nProvider",
@@ -412,8 +463,8 @@
           },
           {
             "position": {
-              "x": 808,
-              "y": 70
+              "x": 858,
+              "y": 55
             },
             "size": {
               "width": 120,
@@ -434,6 +485,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -517,7 +569,6 @@
               ]
             },
             "id": "e805ed68-b9ae-4d94-bbc8-9b66fae46048",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "LDAP",
@@ -539,7 +590,7 @@
           },
           {
             "position": {
-              "x": 808,
+              "x": 858,
               "y": 410
             },
             "size": {
@@ -561,6 +612,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -644,7 +696,6 @@
               ]
             },
             "id": "c9c737be-68cb-47c0-b055-383b1cb26d84",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "SQL\nDatabase",
@@ -1106,12 +1157,7 @@
               "cell": "2b7260fe-d4a3-49a5-85aa-f5b1be8fbf4b",
               "port": "7673f6ed-6b64-48a0-949a-bd7cf2dcb14c"
             },
-            "vertices": [
-              {
-                "x": 270,
-                "y": 350
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1149,7 +1195,7 @@
             "labels": [
               "User is Authenticated"
             ],
-            "id": "cc3f851a-3b19-41d6-a61b-2f0394ba5010",
+            "id": "dbf3045c-2ae1-453d-99e8-a084f6b4964d",
             "source": {
               "cell": "2b7260fe-d4a3-49a5-85aa-f5b1be8fbf4b",
               "port": "441ffc7d-8e24-43bd-933c-ed23963d7793"
@@ -1158,12 +1204,7 @@
               "cell": "8181be74-ca72-4bba-9079-b4f46bff31ec",
               "port": "ec423819-3652-4e8f-9ae2-88ee05bf9179"
             },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 410
-              }
-            ]
+            "vertices": []
           }
         ],
         "description": "Corrected Web App Data Flow Diagram"
