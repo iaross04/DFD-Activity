@@ -340,7 +340,7 @@
                   "severity": "TBD",
                   "type": "Spoofing",
                   "description": "Provide a description for this threat",
-                  "mitigation": "The web application may be spoofed by an attacker and this may lead to unauthorized access to the browser client.",
+                  "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
@@ -361,7 +361,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 1,
                 "informationDisclosure": 0,
@@ -371,7 +371,14 @@
             },
             "children": [
               "52de3467-61d0-474f-a56a-b89b1527bd7a"
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
